@@ -7,7 +7,12 @@ public class SwapBits {
   @EpiTest(testfile = "swap_bits.tsv")
   public static long swapBits(long x, int i, int j) {
     // Implement this placeholder.
-    return 0;
+    if(((x >>> i)& 1) != ((x >>> j)& 1)){
+      long bitmask = (1L << i) | (1L << j);
+      x = x ^ bitmask;
+    }
+
+    return x;
   }
 
   public static void main(String[] args) {
