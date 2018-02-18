@@ -6,6 +6,7 @@ import epi.test_framework.TestFailureException;
 import epi.test_framework.TestTimer;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DutchNationalFlag {
@@ -13,6 +14,23 @@ public class DutchNationalFlag {
 
   public static void dutchFlagPartition(int pivotIndex, List<Color> A) {
     // Implement this placeholder.
+    int lessThan = 0;
+    int greaterThan = A.size() - 1;
+    int i=0;
+    while (i <= greaterThan || (lessThan - greaterThan >1)){
+      if(A.get(i).compareTo(A.get(pivotIndex)) >0){
+        Collections.swap(A, i,greaterThan);
+        greaterThan--;
+      }
+      else if(A.get(i).compareTo(A.get(pivotIndex)) <0){
+        Collections.swap(A,lessThan,i);
+        lessThan++;
+      }
+      else {
+        pivotIndex = i;
+        i++;
+      }
+    }
     return;
   }
 

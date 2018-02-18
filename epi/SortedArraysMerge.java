@@ -11,7 +11,7 @@ public class SortedArraysMerge {
 
   public static List<Integer>
   mergeSortedArrays(List<List<Integer>> sortedArrays) {
-    // Implement this placeholder.
+    // Implement this placeholder
     return null;
   }
 

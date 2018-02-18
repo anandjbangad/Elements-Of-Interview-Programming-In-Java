@@ -12,7 +12,14 @@ import java.util.List;
 public class EvenOddArray {
 
   public static void evenOdd(List<Integer> A) {
-    // Implement this placeholder.
+    //
+    int next_even=0,next_odd=A.size()-1;
+    while (next_even<next_odd)
+      if(A.get(next_even)%2==0)
+        next_even++;
+    else
+      Collections.swap(A,next_even,next_odd--);
+
     return;
   }
 
